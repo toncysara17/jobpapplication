@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+    {%for job in jobslist%}
+    <tr>
+        <td>{{job.job_title}}</td>
+        <td>{{job.job_details}}</td>
+        <td>{{job.phone}}</td>
+        <td>{{job.email}}</td>
+        <td>{{job.location}}</td>
+        <td>{{job.description}}</td>
+        <td>{{job.experience}}</td>
+        <td>{{job.last_date}}</td>
+       <td><a href="{%url 'update' job.id%}">update</a> </td>
+        <td><a href="{%url 'viewappln' job.id%}">View applications</a></td>
+        <td><a href="{%url 'delete' job.id%}">delete</a> </td>
+    </tr>
+        {%endfor%}
+
+
+</table>
+
+</body>
+</html>

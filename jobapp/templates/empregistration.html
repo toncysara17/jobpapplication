@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>EMPLOYER SIGNUP</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+	<div class="col-md-1"></div>
+	<div class="col-md-10">
+		<div class="container b1" style="width: 100%;">
+			<div class="col-md-8">
+				<div style="margin: 10%;">
+					<h3 style="text-align: center;color: #2C4AB0;font-weight: 600;font-size: 20px;">EMPLOYER SIGNUP</h3>
+					<center>
+					<img src="/images/login.png" style="height: 100px;border-radius: 50%;margin-top:2%;margin-bottom: 3%;">
+					</center>
+					<form action="" method="post">
+					{%csrf_token%}
+                    {{form.as_p}}
+
+      				<button type="submit" class="btn btn-block" style="background: rgb(50,50,198);
+background: linear-gradient(117deg, rgba(50,50,198,0.5914740896358543) 35%, rgba(212,66,8,0.5522584033613445) 100%);font-weight: 600;color:#fff;">
+      					<i class="fa fa-user-plus"></i> &nbsp;&nbsp;&nbsp;SIGNUP
+      				</button>
+					</form>
+
+				</div>
+			</div>
+			<div class="col-md-4">
+				<img src="/images/logimage.jpg" style="height: 200px;margin-top: 180px;margin-left:-10px;">
+				<center>
+					<a href="{%url 'esignin'%}" style="font-weight: 600;color: #2C4AB0;font-size: 15px; margin-top: 20px;">Login as Employer</a><br /><br />
+					<a href="{%url 'signup'%}" style="font-weight: 600;color: #2C4AB0;font-size: 15px; margin-top: 20px;">Signup as Jobseeker</a>
+
+				</center>
+			</div>
+		</div>
+
+	</div>
+	<div class="col-md-1"></div>
+
+</body>
+<style type="text/css">
+	body{
+		background: url('/images/loginback.jpg')no-repeat center fixed;
+    background-size: cover;
+	}
+	.b1{
+		margin-top: 2%;
+		width: 100%;
+		border-style: solid;
+		border-radius: 20px;
+		border-color: #fff;
+		border-width: 0.5px;
+		background: #fff;
+	}
+</style>
+</html>
